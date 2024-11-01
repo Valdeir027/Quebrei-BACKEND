@@ -2,3 +2,4 @@ ENV/
 .env
 db.sqlite3
 __pycache__/
+teste.py
