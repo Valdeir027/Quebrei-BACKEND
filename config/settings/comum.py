@@ -30,7 +30,17 @@ INSTALLED_APPS = [
 #third party applications
 INSTALLED_APPS += [
     'django_extensions',
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'drf_yasg',
 ]
+
+
+INSTALLED_APPS += [
+    'api',
+]
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -118,3 +128,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Shell Plus
 SHELL_PLUS = "ipython"
+
+#Rest framework
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
