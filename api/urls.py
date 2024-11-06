@@ -31,10 +31,10 @@ urlpatterns = [
 
 #auth
 auth_urls = [
-    path('login/', UserDetailView.as_view(), name='login'),
+    path('', UserDetailView.as_view(), name='login'),
     path('refresh_token/', TokenRefreshView.as_view(), name='refresh_token'),
 ]
 
 urlpatterns += [
-    path('auth/', include((auth_urls, 'auth'), namespace='auth')),
+    path('auth/', UserDetailView.as_view(), name='login'),
 ]
