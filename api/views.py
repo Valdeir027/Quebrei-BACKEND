@@ -7,15 +7,17 @@ from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework_simplejwt.tokens import AccessToken
 
+
 class UserDetailView(APIView):
-    permission_classes = [AllowAny]  # Garante que qualquer um pode acessar
+    permission_classes = [AllowAny]
+
     @swagger_auto_schema(
         operation_description="LoginUser",
         request_body=openapi.Schema(
             type=openapi.TYPE_OBJECT,
-            required=['cpf', 'senha'],
+            required=['username', 'senha'],
             properties={
-                'cpf': openapi.Schema(type=openapi.TYPE_STRING, description='CPF do usuario'),
+                'username': openapi.Schema(type=openapi.TYPE_STRING, description='CPF do usuario'),
                 'senha': openapi.Schema(type=openapi.TYPE_STRING, description='Senha do usuario'),
             },
         ),
@@ -39,7 +41,7 @@ class UserDetailView(APIView):
     )
     def post(self, request):
         data = request.data
-        user = authenticate(request=request, username=data['cpf'], password=data['senha'])
+        user = authenticate(request=request, username=data['username'], password=data['senha'])
 
         if user is not None:
             access_token = AccessToken.for_user(user)  # Gera o token JWT para o usuário
