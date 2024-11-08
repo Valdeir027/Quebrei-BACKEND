@@ -1,0 +1,25 @@
+{% extends 'auth/default.html' %}
+
+
+{%block page_css%}
+    <style>
+        .LoginCard {
+            background: #5088a5;
+        }
+    </style>
+
+{%endblock%}
+
+
+{%block page_content%}
+    <div class="direita w-screen h-scree flex items-center justify-center">
+        <div class="LoginCard flex flex-col items-center justify-center rounded-2xl  w-1/2 h-1/2  drop-shadow-xl">
+        </div>
+    </div>
+
+    <div class="esquerda w-screen h-scree">
+        <div class="container">
+            Lado esquerdo
+        </div>
+    </div>
+{%endblock%}

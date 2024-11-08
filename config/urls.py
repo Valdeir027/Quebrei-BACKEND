@@ -19,5 +19,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls'))
+    path('auth/', include('quebreiauth.urls'))
+]
+
+# api
+urlpatterns += [
+    path('api/v1/', include('api.urls'))
 ]

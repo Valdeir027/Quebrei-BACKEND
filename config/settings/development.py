@@ -1,4 +1,4 @@
-from comum import * # noqa
+from .comum import * # noqa
 
 DATABASES = {
     'default': {

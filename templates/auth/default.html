@@ -1,0 +1,22 @@
+{% extends 'default.html' %}
+
+{%block title%} Quebrei - Auth {%endblock%}
+
+{%block css%} 
+    <style>
+        .custom-bg-gradiente {
+            background: linear-gradient(90deg, rgba(20,32,38,1) 0%, rgba(59,101,122,1) 40%, rgba(233,240,192,1) 100%);
+        }
+
+    </style>
+    {%block page_css%}{%endblock%}
+{%endblock%}
+
+{%block content%}
+<div class="w-screen h-screen flex custom-bg-gradiente">
+
+    {% block page_content %}
+
+    {%endblock%}
+</div>
+{%endblock%}
