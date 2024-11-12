@@ -11,4 +11,7 @@
 
 ## Consulte a Wiki
 
-Para mais informações detalhadas sobre o funcionamento do sistema, configurações avançadas, e dicas de uso, consulte a [Wiki do projeto](https://gitlab.com/quebrei/quebrei-backend/-/wikis/home).
+Para mais informações detalhadas sobre o funcionamento do sistema, configurações avançadas, e dicas de uso, consulte a Wiki.
+
+[Wiki no gitlab](https://gitlab.com/quebrei/quebrei-backend/-/wikis/home)
+[Wiki no github](https://github.com/Valdeir027/Quebrei-BACKEND/wiki)
