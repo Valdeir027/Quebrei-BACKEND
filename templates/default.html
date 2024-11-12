@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>{%block title%}{%endblock%}</title>
-
+    <link rel="stylesheet" href="{%static 'css/global.css'%}">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     {%block css%}
     {%endblock%}
 </head>
@@ -16,6 +17,6 @@
 
     {%block js%}
     {%endblock%}
-    
+    <script src="https://kit.fontawesome.com/36386f3d35.js" crossorigin="anonymous"></script>
 </body>
 </html>

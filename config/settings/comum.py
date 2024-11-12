@@ -64,6 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django_settings_export.settings_export',
             ],
         },
     },
@@ -71,6 +72,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
+SETTINGS_EXPORT = [
+    'MY_CHEESE',
+]
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
@@ -107,6 +111,9 @@ USE_I18N = True
 USE_TZ = True
 
 
+SETTINGS_EXPORT = [ 
+    'TIME_ZONE'
+]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 STATIC_URL = 'static/'
@@ -134,3 +141,12 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 }
+
+
+LOGIN_URL = '/auth/login/'
+LOGIN_REDIRECT_URL = '/admin'
+LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = '/auth/login/'
+
+# authetication
+# https://umcodigo.com/autenticacao-com-google-no-django/
